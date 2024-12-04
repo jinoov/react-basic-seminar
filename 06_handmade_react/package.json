@@ -1,0 +1,19 @@
+{
+  "name": "06_handmade_react",
+  "version": "1.0.0",
+  "description": "A basic React seminar project",
+  "main": "index.js",
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "vite": "^3.0.0",
+    "@vitejs/plugin-react": "^2.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
