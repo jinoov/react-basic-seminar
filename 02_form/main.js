@@ -5,27 +5,29 @@ function App() {
   const handleSubmit = (event) => {
     // 리로드 방지
     event.preventDefault();
+
     // 입력값 확인
-    alert(`ID: ${id}, PW: ${pw}`);
+    alert(`Welcome, ID: ${id}, PW: ${pw}`);
   };
 
   return (
     <form onSubmit={handleSubmit}>
+      <h2>Login</h2>
       <div>
         <label>
-          ID:
+          아이디:
           {/* 고쳐야할 곳 */}
           <input type="text" value={id} />
         </label>
       </div>
       <div>
         <label>
-          PW:
+          패스워드:
           {/* 고쳐야할 곳 */}
           <input type="password" value={pw} />
         </label>
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit">제출</button>
     </form>
   );
 }

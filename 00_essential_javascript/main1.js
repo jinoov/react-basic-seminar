@@ -1,13 +1,11 @@
 // var, let, const 실습
-var oldVariable = 'I can be re-declared and updated';
-console.log(oldVariable);
 
-let newVariable = 'I can be updated but not re-declared';
-console.log(newVariable);
+// 웬만하면 쓰지말자. 2015년 이전에 쓰던 변수선언법
+var varName = '홍길동';
 
-const constantVariable = 'I cannot be updated or re-declared';
-console.log(constantVariable);
+let letName = '홍길순';
 
-// 재할당/재선언 테스트
-newVariable = 'Updated value';
-// constantVariable = 'This will throw an error'; // Uncomment to see the error
+const constName = '홍길몽';
+
+letName = '김철수';
+console.log(letName);

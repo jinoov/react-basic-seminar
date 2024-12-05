@@ -16,5 +16,7 @@ console.log('JavaScript is running!');
 // --------------------------------------------
 
 // if (typeof window === 'undefined') {
-//   console.log('Node.js 환경입니다.')
+//   console.log('Node.js 환경입니다.');
+// } else {
+//   console.log('브라우저 환경입니다.');
 // }

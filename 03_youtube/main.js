@@ -14,6 +14,7 @@ function App() {
       name: '로제',
       url: 'https://www.youtube.com/embed/dgGqD28J6aQ',
     },
+    // TODO: add your own video!
   ];
 
   return (
@@ -21,9 +22,7 @@ function App() {
       <h1>Youtube</h1>
       <div>
         {videos.map((video, index) => (
-          <button key={index} onClick={() => setSelectedVideo(video)}>
-            {video.name}
-          </button>
+          <button key={index}>{video.name}</button>
         ))}
       </div>
       <div>{selectedVideo ? <iframe width="560" height="315" src={selectedVideo.url} frameBorder="0" allowFullScreen title={selectedVideo.name} /> : <p>비디오를 골라보세요</p>}</div>

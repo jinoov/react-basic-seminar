@@ -1,13 +1,29 @@
+// 1. 컴포넌트(화면에 보이는 조각들, 덩어리들)
 function App() {
+  // 2. 변수 등등 선언
+
   let count = 0;
   //   let [count, setCount] = React.useState(0);
 
+  // 3. return문 내부에는 화면에 보여질 html 코드를 작성
   return (
     <div>
-      <h1>카운트: {count}</h1>
-      <h2>더블: {count * 2}</h2>
-      <button onClick={() => count++}>Increment</button>
-      <button onClick={() => count--}>Decrement</button>
+      <h2>count: {count}</h2>
+      <h2>doubled: {count * 2}</h2>
+      <button
+        onClick={function () {
+          count += 1;
+        }}
+      >
+        Increment
+      </button>
+      <button
+        onClick={function () {
+          count -= 1;
+        }}
+      >
+        Decrement
+      </button>
     </div>
   );
 }
