@@ -1,7 +1,7 @@
 function App() {
-  const [selectedVideo, setSelectedVideo] = React.useState(null);
+  let [selectedVideo, setSelectedVideo] = React.useState(null);
 
-  const videos = [
+  let videos = [
     {
       name: '지디',
       url: 'https://www.youtube.com/embed/Ox29z5Nf1Uk',
@@ -22,7 +22,15 @@ function App() {
       <h1>Youtube</h1>
       <div>
         {videos.map((video, index) => (
-          <button key={index}>{video.name}</button>
+          <button
+            key={index}
+            // 고쳐야할 곳
+            onClick={function () {
+              console.log(video);
+            }}
+          >
+            {video.name}
+          </button>
         ))}
       </div>
       <div>{selectedVideo ? <iframe width="560" height="315" src={selectedVideo.url} frameBorder="0" allowFullScreen title={selectedVideo.name} /> : <p>비디오를 골라보세요</p>}</div>
@@ -30,6 +38,6 @@ function App() {
   );
 }
 
-const root = ReactDOM.createRoot(document.querySelector('#root'));
+let root = ReactDOM.createRoot(document.querySelector('#root'));
 
 root.render(<App />);

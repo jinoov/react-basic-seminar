@@ -1,8 +1,8 @@
 function App() {
-  const [id, setId] = React.useState('');
-  const [pw, setPw] = React.useState('');
+  let [id, setId] = React.useState('');
+  let [pw, setPw] = React.useState('');
 
-  const handleSubmit = (event) => {
+  let handleSubmit = function (event) {
     // 리로드 방지
     event.preventDefault();
 
@@ -16,15 +16,27 @@ function App() {
       <div>
         <label>
           아이디:
-          {/* 고쳐야할 곳 */}
-          <input type="text" value={id} />
+          <input
+            type="text"
+            value={id}
+            // 고쳐야할 곳
+            onChange={function (e) {
+              console.log(e.target.value);
+            }}
+          />
         </label>
       </div>
       <div>
         <label>
           패스워드:
-          {/* 고쳐야할 곳 */}
-          <input type="password" value={pw} />
+          <input
+            type="password"
+            value={pw}
+            // 고쳐야할 곳
+            onChange={function (e) {
+              console.log(e.target.value);
+            }}
+          />
         </label>
       </div>
       <button type="submit">제출</button>
@@ -32,6 +44,6 @@ function App() {
   );
 }
 
-const root = ReactDOM.createRoot(document.querySelector('#root'));
+let root = ReactDOM.createRoot(document.querySelector('#root'));
 
 root.render(<App />);
